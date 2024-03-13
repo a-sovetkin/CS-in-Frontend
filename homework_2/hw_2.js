@@ -20,39 +20,38 @@ const program = [
 ];
 
 function execute(program) {
-  let res = 0;
+  let acc = 0;
   let skip = false;           // признак пропуска команды
   let line = 0;
 
   while ( line <= program.length ) {
     switch (program[line]) {
       case instructions['SET A']:
-        (!skip) ? (res = program[line+1]) : (skip = false);
+        (!skip) ? (acc = program[line+1]) : (skip = false);
         line += 2;
         break;
 
       case instructions['PRINT A']:
-        (!skip) ? (console.log('PRINT A: ', res)) : (skip = false);
+        (!skip) ? (console.log('PRINT A: ', acc)) : (skip = false);
         line ++;
         break;
 
       case instructions['IFN A']:
-        (res != 0) && (skip = true);
+        (acc != 0) && (skip = true);
         line ++;
         break;
 
       case instructions['RET']:
         if (!skip) {
           return program[line+1];
-        }
-        else {
+        } else {
           skip = false;
           line +=2;
         }
         break;
 
       case instructions['DEC A']:
-        (!skip) ? (res--) : (skip = false);
+        (!skip) ? (acc--) : (skip = false);
         line++;
         break;
 
