@@ -21,7 +21,7 @@ const program = [
 
 function execute(program) {
   let res = 0;
-  let skip = false;
+  let skip = false;           // признак пропуска команды
   let line = 0;
 
   while ( line <= program.length ) {
@@ -30,14 +30,17 @@ function execute(program) {
         (!skip) ? (res = program[line+1]) : (skip = false);
         line += 2;
         break;
+
       case instructions['PRINT A']:
         (!skip) ? (console.log('PRINT A: ', res)) : (skip = false);
         line ++;
         break;
+
       case instructions['IFN A']:
         (res != 0) && (skip = true);
         line ++;
         break;
+
       case instructions['RET']:
         if (!skip) {
           return program[line+1];
@@ -47,10 +50,12 @@ function execute(program) {
           line +=2;
         }
         break;
+
       case instructions['DEC A']:
         (!skip) ? (res--) : (skip = false);
         line++;
         break;
+
       case instructions['JMP']:
         line = program[line+1];
         break;
