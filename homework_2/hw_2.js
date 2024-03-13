@@ -8,15 +8,15 @@ const instructions = {
 };
 
 const program = [
-  instructions['SET A'],      // 0= Ставим значения аккумулятора
-  10,                         // 1= В 10
-  instructions['PRINT A'],    // 2= Выводим значение на экран
-  instructions['IFN A'],      // 3= Если A равно 0
-  instructions['RET'],        // 4= Программа завершается
-  0,                          // 5= И возвращает 0
-  instructions['DEC A'],      // 6= Уменьшаем A на 1
-  instructions['JMP'],        // 7= Устанавливаем курсор выполняемой инструкции
-  2                           // 8= В значение 2
+  instructions['SET A'],      // Ставим значения аккумулятора
+  10,                         // В 10
+  instructions['PRINT A'],    // Выводим значение на экран
+  instructions['IFN A'],      // Если A равно 0
+  instructions['RET'],        // Программа завершается
+  0,                          // И возвращает 0
+  instructions['DEC A'],      // Уменьшаем A на 1
+  instructions['JMP'],        // Устанавливаем курсор выполняемой инструкции
+  2                           // В значение 2
 ];
 
 function execute(program) {
