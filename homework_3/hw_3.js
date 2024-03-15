@@ -39,5 +39,5 @@ fizzbuzz(4n, 1n);
 // 15n 'FizzBuzz!'
 // 16n 16n
 // 17n 17n
-// 5 wrong type
-// 8 wrong order
+// wrong type
+// wrong order
