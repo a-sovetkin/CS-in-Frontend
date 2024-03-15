@@ -17,7 +17,7 @@ function fizzbuzz( next = 1n, last = 10n ) {
   }
 }
 
-fizzbuzz(1n,17n);
+fizzbuzz(1n, 17n);
 fizzbuzz(4n, 2);
 fizzbuzz(4n, 1n);
 
