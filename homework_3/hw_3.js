@@ -13,7 +13,7 @@ function fizzbuzz( next = 1n, last = 10n ) {
     (next % 5n === 0n) && (res = 'Buzz');
     ((next % 3n === 0n) & (next % 5n === 0n)) && (res = 'FizzBuzz!');
     console.log(next , res);
-    next ++;
+    next++;
   }
 }
 
